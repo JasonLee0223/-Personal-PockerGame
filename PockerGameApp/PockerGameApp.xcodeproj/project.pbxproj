@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B06C286282D603B009F4CD4 /* PockerGameAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06C285282D603B009F4CD4 /* PockerGameAppTests.swift */; };
+		5B06C2D7283621C6009F4CD4 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B06C2D6283621C6009F4CD4 /* ButtonView.swift */; };
+		5B2165D127CE59100007E835 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2165D027CE59100007E835 /* Card.swift */; };
+		5B54C28D27D595B4007FEE85 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B54C28C27D595B4007FEE85 /* Deck.swift */; };
+		5BA7A07F27C773DA005254A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7A07E27C773DA005254A4 /* AppDelegate.swift */; };
+		5BA7A08127C773DA005254A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7A08027C773DA005254A4 /* SceneDelegate.swift */; };
+		5BA7A08327C773DA005254A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7A08227C773DA005254A4 /* ViewController.swift */; };
+		5BA7A08627C773DA005254A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7A08427C773DA005254A4 /* Main.storyboard */; };
+		5BA7A08827C773DB005254A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7A08727C773DB005254A4 /* Assets.xcassets */; };
+		5BA7A08B27C773DB005254A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7A08927C773DB005254A4 /* LaunchScreen.storyboard */; };
+		5BBE76932897B075005C0228 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE76922897B075005C0228 /* PlayerView.swift */; };
+		5BC2256F282B7D1600E16AE5 /* participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2256E282B7D1500E16AE5 /* participant.swift */; };
+		5BC22571282B7D3700E16AE5 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC22570282B7D3700E16AE5 /* Dealer.swift */; };
+		5BC22575282B7D5700E16AE5 /* PockerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC22574282B7D5700E16AE5 /* PockerGame.swift */; };
+		5BC22577282B81ED00E16AE5 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC22576282B81ED00E16AE5 /* Hand.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B06C287282D603B009F4CD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BA7A07327C773DA005254A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA7A07A27C773DA005254A4;
+			remoteInfo = PockerGameApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B06C283282D603B009F4CD4 /* PockerGameAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PockerGameAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B06C285282D603B009F4CD4 /* PockerGameAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockerGameAppTests.swift; sourceTree = "<group>"; };
+		5B06C2D6283621C6009F4CD4 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		5B2165D027CE59100007E835 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5B54C28C27D595B4007FEE85 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		5BA7A07B27C773DA005254A4 /* PockerGameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PockerGameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA7A07E27C773DA005254A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5BA7A08027C773DA005254A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5BA7A08227C773DA005254A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5BA7A08527C773DA005254A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BA7A08727C773DB005254A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BA7A08A27C773DB005254A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5BA7A08C27C773DB005254A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BBE76922897B075005C0228 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		5BC2256E282B7D1500E16AE5 /* participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = participant.swift; sourceTree = "<group>"; };
+		5BC22570282B7D3700E16AE5 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
+		5BC22574282B7D5700E16AE5 /* PockerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockerGame.swift; sourceTree = "<group>"; };
+		5BC22576282B81ED00E16AE5 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B06C280282D603B009F4CD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA7A07827C773DA005254A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B06C284282D603B009F4CD4 /* PockerGameAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B06C285282D603B009F4CD4 /* PockerGameAppTests.swift */,
+			);
+			path = PockerGameAppTests;
+			sourceTree = "<group>";
+		};
+		5B06C2D128361D8C009F4CD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B06C2D6283621C6009F4CD4 /* ButtonView.swift */,
+				5BBE76922897B075005C0228 /* PlayerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BA7A07227C773DA005254A4 = {
+			isa = PBXGroup;
+			children = (
+				5BA7A07D27C773DA005254A4 /* PockerGameApp */,
+				5B06C284282D603B009F4CD4 /* PockerGameAppTests */,
+				5BA7A07C27C773DA005254A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BA7A07C27C773DA005254A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BA7A07B27C773DA005254A4 /* PockerGameApp.app */,
+				5B06C283282D603B009F4CD4 /* PockerGameAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BA7A07D27C773DA005254A4 /* PockerGameApp */ = {
+			isa = PBXGroup;
+			children = (
+				5B06C2D128361D8C009F4CD4 /* View */,
+				5BC2256C282B7B5900E16AE5 /* Resource */,
+				5BC2256D282B7B6900E16AE5 /* Model */,
+				5BA7A08227C773DA005254A4 /* ViewController.swift */,
+				5BA7A08427C773DA005254A4 /* Main.storyboard */,
+				5BA7A08C27C773DB005254A4 /* Info.plist */,
+			);
+			path = PockerGameApp;
+			sourceTree = "<group>";
+		};
+		5BC2256C282B7B5900E16AE5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5BA7A07E27C773DA005254A4 /* AppDelegate.swift */,
+				5BA7A08027C773DA005254A4 /* SceneDelegate.swift */,
+				5BA7A08727C773DB005254A4 /* Assets.xcassets */,
+				5BA7A08927C773DB005254A4 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		5BC2256D282B7B6900E16AE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B2165D027CE59100007E835 /* Card.swift */,
+				5B54C28C27D595B4007FEE85 /* Deck.swift */,
+				5BC22576282B81ED00E16AE5 /* Hand.swift */,
+				5BC2256E282B7D1500E16AE5 /* participant.swift */,
+				5BC22570282B7D3700E16AE5 /* Dealer.swift */,
+				5BC22574282B7D5700E16AE5 /* PockerGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B06C282282D603B009F4CD4 /* PockerGameAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B06C28B282D603B009F4CD4 /* Build configuration list for PBXNativeTarget "PockerGameAppTests" */;
+			buildPhases = (
+				5B06C27F282D603B009F4CD4 /* Sources */,
+				5B06C280282D603B009F4CD4 /* Frameworks */,
+				5B06C281282D603B009F4CD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B06C288282D603B009F4CD4 /* PBXTargetDependency */,
+			);
+			name = PockerGameAppTests;
+			productName = PockerGameAppTests;
+			productReference = 5B06C283282D603B009F4CD4 /* PockerGameAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BA7A07A27C773DA005254A4 /* PockerGameApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BA7A08F27C773DB005254A4 /* Build configuration list for PBXNativeTarget "PockerGameApp" */;
+			buildPhases = (
+				5BA7A07727C773DA005254A4 /* Sources */,
+				5BA7A07827C773DA005254A4 /* Frameworks */,
+				5BA7A07927C773DA005254A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PockerGameApp;
+			productName = PockerGameApp;
+			productReference = 5BA7A07B27C773DA005254A4 /* PockerGameApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BA7A07327C773DA005254A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					5B06C282282D603B009F4CD4 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 5BA7A07A27C773DA005254A4;
+					};
+					5BA7A07A27C773DA005254A4 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 5BA7A07627C773DA005254A4 /* Build configuration list for PBXProject "PockerGameApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BA7A07227C773DA005254A4;
+			productRefGroup = 5BA7A07C27C773DA005254A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BA7A07A27C773DA005254A4 /* PockerGameApp */,
+				5B06C282282D603B009F4CD4 /* PockerGameAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B06C281282D603B009F4CD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA7A07927C773DA005254A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA7A08B27C773DB005254A4 /* LaunchScreen.storyboard in Resources */,
+				5BA7A08827C773DB005254A4 /* Assets.xcassets in Resources */,
+				5BA7A08627C773DA005254A4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B06C27F282D603B009F4CD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B06C286282D603B009F4CD4 /* PockerGameAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BA7A07727C773DA005254A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BA7A08327C773DA005254A4 /* ViewController.swift in Sources */,
+				5BC22575282B7D5700E16AE5 /* PockerGame.swift in Sources */,
+				5BC2256F282B7D1600E16AE5 /* participant.swift in Sources */,
+				5BBE76932897B075005C0228 /* PlayerView.swift in Sources */,
+				5BC22571282B7D3700E16AE5 /* Dealer.swift in Sources */,
+				5BA7A07F27C773DA005254A4 /* AppDelegate.swift in Sources */,
+				5BC22577282B81ED00E16AE5 /* Hand.swift in Sources */,
+				5B54C28D27D595B4007FEE85 /* Deck.swift in Sources */,
+				5B2165D127CE59100007E835 /* Card.swift in Sources */,
+				5B06C2D7283621C6009F4CD4 /* ButtonView.swift in Sources */,
+				5BA7A08127C773DA005254A4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B06C288282D603B009F4CD4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BA7A07A27C773DA005254A4 /* PockerGameApp */;
+			targetProxy = 5B06C287282D603B009F4CD4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BA7A08427C773DA005254A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA7A08527C773DA005254A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5BA7A08927C773DB005254A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BA7A08A27C773DB005254A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B06C289282D603B009F4CD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Jason.PockerGameAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PockerGameApp.app/PockerGameApp";
+			};
+			name = Debug;
+		};
+		5B06C28A282D603B009F4CD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Jason.PockerGameAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PockerGameApp.app/PockerGameApp";
+			};
+			name = Release;
+		};
+		5BA7A08D27C773DB005254A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BA7A08E27C773DB005254A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BA7A09027C773DB005254A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PockerGameApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Jason.PockerGameApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BA7A09127C773DB005254A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PockerGameApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Jason.PockerGameApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B06C28B282D603B009F4CD4 /* Build configuration list for PBXNativeTarget "PockerGameAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B06C289282D603B009F4CD4 /* Debug */,
+				5B06C28A282D603B009F4CD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA7A07627C773DA005254A4 /* Build configuration list for PBXProject "PockerGameApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA7A08D27C773DB005254A4 /* Debug */,
+				5BA7A08E27C773DB005254A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BA7A08F27C773DB005254A4 /* Build configuration list for PBXNativeTarget "PockerGameApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA7A09027C773DB005254A4 /* Debug */,
+				5BA7A09127C773DB005254A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BA7A07327C773DA005254A4 /* Project object */;
+}
