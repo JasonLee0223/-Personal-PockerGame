@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlayerView: UIView {
+class PlayerView: UIView, returnDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +35,12 @@ class PlayerView: UIView {
         firstCardImage.image = UIImage(named: "c2")
         return firstCardImage
     }()
+    
+    //MARK: - ButtonView에서 data를 받아와서 처리해주는 프로퍼티와 메서드
+    
+    func dataReceived(data: Int) {
+        print(data)
+    }
     
 //    func whenUserChoiceStudAndPlayer() {
 //        if let stud = ButtonView.inputValue.first {

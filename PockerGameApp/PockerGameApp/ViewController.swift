@@ -7,9 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    private var userInput = [Int]()
+class ViewController: UIViewController, returnDelegate {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -20,7 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setBackground()
         createButtonView()
-//        createPlayerView()
+        createPlayerView()
         
     }
     
@@ -101,7 +99,13 @@ class ViewController: UIViewController {
     private func createButtonView() {
         let customButtonView = ButtonView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: 200))
         view.addSubview(customButtonView)
+        customButtonView.delegate = self
     }
+    
+    func dataReceived(data: Int) {
+        print("\(data)")
+    }
+    
     
     private func createPlayerView() {
         let customPlayerView = PlayerView(frame: CGRect(x:0, y: 200, width: UIScreen.main.bounds.width, height: 650))
