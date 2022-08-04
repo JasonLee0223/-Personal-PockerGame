@@ -32,6 +32,16 @@ class ViewController: UIViewController, returnDelegate {
         print("ViewController의 view가 화면에 나타남")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("ViewController의 view가 사라지기 전")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("ViewController의 view가 사라짐")
+    }
+    
     //Background 설정
     private func setBackground() {
         guard let patternImage: UIImage = UIImage(named: "bg_pattern.png") else { return }
