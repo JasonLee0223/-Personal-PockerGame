@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, returnDelegate {
+class ViewController: UIViewController{
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -18,7 +18,6 @@ class ViewController: UIViewController, returnDelegate {
         // Do any additional setup after loading the view.
         setBackground()
         createButtonView()
-        createPlayerView()
         
     }
     
@@ -95,21 +94,22 @@ class ViewController: UIViewController, returnDelegate {
         }
     }
     
+    // MARK: data Receive from ViewController
+//    private(set) var userData = [Int]()
+    
     // MARK: - step5
     private func createButtonView() {
-        let customButtonView = ButtonView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: 200))
+        let customButtonView = ButtonView(frame: CGRect(x:0, y:0, width: UIScreen.main.bounds.width, height: 844))
         view.addSubview(customButtonView)
-        customButtonView.delegate = self
-    }
-    
-    func dataReceived(data: Int) {
-        print("\(data)")
-    }
-    
-    
-    private func createPlayerView() {
-        let customPlayerView = PlayerView(frame: CGRect(x:0, y: 200, width: UIScreen.main.bounds.width, height: 650))
-        view.addSubview(customPlayerView)
+//        customButtonView.delegate = self
     }
     
 }
+
+//extension ViewController: returnDelegate {
+//
+//    func dataReceived(inputValue: Int) {
+//        userData.append(inputValue)
+//        print("\(userData)")
+//    }
+//}

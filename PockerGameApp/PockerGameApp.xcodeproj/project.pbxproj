@@ -17,7 +17,6 @@
 		5BA7A08627C773DA005254A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7A08427C773DA005254A4 /* Main.storyboard */; };
 		5BA7A08827C773DB005254A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7A08727C773DB005254A4 /* Assets.xcassets */; };
 		5BA7A08B27C773DB005254A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BA7A08927C773DB005254A4 /* LaunchScreen.storyboard */; };
-		5BBE76932897B075005C0228 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBE76922897B075005C0228 /* PlayerView.swift */; };
 		5BC2256F282B7D1600E16AE5 /* participant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC2256E282B7D1500E16AE5 /* participant.swift */; };
 		5BC22571282B7D3700E16AE5 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC22570282B7D3700E16AE5 /* Dealer.swift */; };
 		5BC22575282B7D5700E16AE5 /* PockerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC22574282B7D5700E16AE5 /* PockerGame.swift */; };
@@ -48,7 +47,6 @@
 		5BA7A08727C773DB005254A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BA7A08A27C773DB005254A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BA7A08C27C773DB005254A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BBE76922897B075005C0228 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		5BC2256E282B7D1500E16AE5 /* participant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = participant.swift; sourceTree = "<group>"; };
 		5BC22570282B7D3700E16AE5 /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		5BC22574282B7D5700E16AE5 /* PockerGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PockerGame.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				5B06C2D6283621C6009F4CD4 /* ButtonView.swift */,
-				5BBE76922897B075005C0228 /* PlayerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,7 +254,6 @@
 				5BA7A08327C773DA005254A4 /* ViewController.swift in Sources */,
 				5BC22575282B7D5700E16AE5 /* PockerGame.swift in Sources */,
 				5BC2256F282B7D1600E16AE5 /* participant.swift in Sources */,
-				5BBE76932897B075005C0228 /* PlayerView.swift in Sources */,
 				5BC22571282B7D3700E16AE5 /* Dealer.swift in Sources */,
 				5BA7A07F27C773DA005254A4 /* AppDelegate.swift in Sources */,
 				5BC22577282B81ED00E16AE5 /* Hand.swift in Sources */,
