@@ -17,9 +17,19 @@ class ViewController: UIViewController, returnDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setBackground()
-        createButtonView()
-//        createPlayerView()
+        print("ViewController의 메모리에 View가 Load됨")
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        createButtonView()
+        print("ViewController의 view가 Load됨")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("ViewController의 view가 화면에 나타남")
     }
     
     //Background 설정
