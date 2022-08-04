@@ -18,7 +18,7 @@ class ViewController: UIViewController, returnDelegate {
         // Do any additional setup after loading the view.
         setBackground()
         createButtonView()
-        createPlayerView()
+//        createPlayerView()
         
     }
     
@@ -105,7 +105,6 @@ class ViewController: UIViewController, returnDelegate {
     func dataReceived(data: Int) {
         print("\(data)")
     }
-    
     
     private func createPlayerView() {
         let customPlayerView = PlayerView(frame: CGRect(x:0, y: 200, width: UIScreen.main.bounds.width, height: 650))

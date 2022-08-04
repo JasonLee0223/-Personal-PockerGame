@@ -129,7 +129,9 @@ class ButtonView: UIView {
         fourPeopleButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -125).isActive = true
         fourPeopleButton.addTarget(self, action: #selector(receiveInput(value:)), for: .touchUpInside)
     }
-    
+}
+
+extension ButtonView {
     //MARK: - addTarget Method
     @objc func receiveInput(value sender: UIButton) {
         guard let digit = sender.currentTitle?.first else { return }
