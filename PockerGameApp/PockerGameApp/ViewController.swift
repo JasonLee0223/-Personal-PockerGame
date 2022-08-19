@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: - Override
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -23,6 +24,12 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         
     }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        
+    }
+    
+    //MARK: - Method
     
     //Background 설정
     private func setBackground() {
@@ -54,11 +61,3 @@ class ViewController: UIViewController {
     }
     
 }
-
-//extension ViewController: returnDelegate {
-//
-//    func dataReceived(inputValue: Int) {
-//        userData.append(inputValue)
-//        print("\(userData)")
-//    }
-//}
