@@ -4,9 +4,6 @@
 //
 //  Created by Jason on 2022/05/19.
 //
-protocol returnDelegate: AnyObject {
-    func dataReceived(data: Int)
-}
 
 import UIKit
 
@@ -23,10 +20,6 @@ class ButtonView: UIView {
         super.init(coder: coder)
         
     }
-    
-    //MARK: - delegate
-    // 이 delegate를 통해서 protocol 간의 연결이 이루어진다.
-    weak var delegate: returnDelegate?
     
     private(set) var inputValue = [Int]()
     
@@ -80,10 +73,6 @@ class ButtonView: UIView {
         return fourPeople
     }()
     
-//    func transferDelegate(data: [Int]) {
-//        self.inputValue = data
-//    }
-    
     //MARK: - Stud Button Layout
     func configureStudButtonLayout() {
         self.addSubview(sevenStudButton)
@@ -136,8 +125,6 @@ extension ButtonView {
     @objc func receiveInput(value sender: UIButton) {
         guard let digit = sender.currentTitle?.first else { return }
         guard let convertToInt = Int(String(digit)) else { return }
-        
-        delegate?.dataReceived(data: convertToInt)
         
         switch convertToInt {
         case 7:

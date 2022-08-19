@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlayerView: UIView, returnDelegate {
+class PlayerView:UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,20 +36,6 @@ class PlayerView: UIView, returnDelegate {
         return firstCardImage
     }()
     
-    //MARK: - ButtonView에서 data를 받아와서 처리해주는 프로퍼티와 메서드
-    
-    func dataReceived(data: Int) {
-        print(data)
-    }
-    
-//    func whenUserChoiceStudAndPlayer() {
-//        if let stud = ButtonView.inputValue.first {
-//            if stud == 7 || stud == 5 {
-//                print("is collect")
-//            }
-//        }
-//    }
-    
     //MARK: - Player Image Layout
     func configurePlayerLayout() {
         self.addSubview(firstPlayer)
@@ -65,11 +51,6 @@ class PlayerView: UIView, returnDelegate {
         firstCardImage.heightAnchor.constraint(equalToConstant: 70).isActive = true
         firstCardImage.topAnchor.constraint(equalTo: firstPlayer.bottomAnchor).isActive = true
         firstCardImage.leadingAnchor.constraint(equalTo: firstPlayer.leadingAnchor).isActive = true
-    }
-    
-    //MARK: - get InputValue Array
-    func getData(from userInput: [Int]) {
-        
     }
     
 }
