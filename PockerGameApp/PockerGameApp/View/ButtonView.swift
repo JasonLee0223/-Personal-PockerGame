@@ -19,10 +19,7 @@ class ButtonView: UIView {
         super.init(coder: coder)
     }
     
-    //MARK: - delegate
-    // 이 delegate를 통해서 protocol 간의 연결이 이루어진다.
-//    weak var delegate: returnDelegate?
-    private(set) var userInput = [Int]()
+    private(set) var inputValue = [Int]()
     
     let sevenStudButton: UIButton = {
         let sevenStud = UIButton()
@@ -74,22 +71,6 @@ class ButtonView: UIView {
         return fourPeople
     }()
     
-    //MARK: - Player Part
-    let firstPlayer: UILabel = {
-        let firstPlayer = UILabel()
-        firstPlayer.text = "Player1"
-        firstPlayer.textColor = .white
-        firstPlayer.font = .systemFont(ofSize: 22, weight: .regular)
-        firstPlayer.textAlignment = .left
-        return firstPlayer
-    }()
-    
-    let firstCardImage: UIImageView = {
-       let firstCardImage = UIImageView()
-        firstCardImage.image = UIImage(named: "c2")
-        return firstCardImage
-    }()
-    
     //MARK: - Stud Button Layout
     func configureStudButtonLayout() {
         self.addSubview(sevenStudButton)
@@ -135,24 +116,6 @@ class ButtonView: UIView {
         fourPeopleButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -125).isActive = true
         fourPeopleButton.addTarget(self, action: #selector(receiveInput(value:)), for: .touchUpInside)
     }
-    
-    //MARK: - Player Image Layout
-    func configurePlayerLayout() {
-        self.addSubview(firstPlayer)
-        firstPlayer.translatesAutoresizingMaskIntoConstraints = false
-        firstPlayer.widthAnchor.constraint(equalToConstant: 70).isActive = true
-        firstPlayer.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        firstPlayer.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        firstPlayer.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30).isActive = true
-        
-        self.addSubview(firstCardImage)
-        firstCardImage.translatesAutoresizingMaskIntoConstraints = false
-        firstCardImage.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        firstCardImage.heightAnchor.constraint(equalToConstant: 70).isActive = true
-        firstCardImage.topAnchor.constraint(equalTo: firstPlayer.bottomAnchor).isActive = true
-        firstCardImage.leadingAnchor.constraint(equalTo: firstPlayer.leadingAnchor).isActive = true
-    }
-    
 }
 
 extension ButtonView {
@@ -160,8 +123,6 @@ extension ButtonView {
     @objc func receiveInput(value sender: UIButton) {
         guard let digit = sender.currentTitle?.first else { return }
         guard let convertToInt = Int(String(digit)) else { return }
-        
-        userInput.append(convertToInt)
         
         switch convertToInt {
         case 7:
