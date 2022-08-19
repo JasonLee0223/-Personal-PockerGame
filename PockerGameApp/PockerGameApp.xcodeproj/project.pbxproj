@@ -132,14 +132,30 @@
 		5BC2256D282B7B6900E16AE5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5B2165D027CE59100007E835 /* Card.swift */,
-				5B54C28C27D595B4007FEE85 /* Deck.swift */,
-				5BC22576282B81ED00E16AE5 /* Hand.swift */,
-				5BC2256E282B7D1500E16AE5 /* participant.swift */,
-				5BC22570282B7D3700E16AE5 /* Dealer.swift */,
+				5BE28F8828AF6728002ADC55 /* Card */,
+				5BE28F8928AF673D002ADC55 /* Player */,
 				5BC22574282B7D5700E16AE5 /* PockerGame.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5BE28F8828AF6728002ADC55 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				5B2165D027CE59100007E835 /* Card.swift */,
+				5B54C28C27D595B4007FEE85 /* Deck.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		5BE28F8928AF673D002ADC55 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				5BC22576282B81ED00E16AE5 /* Hand.swift */,
+				5BC2256E282B7D1500E16AE5 /* participant.swift */,
+				5BC22570282B7D3700E16AE5 /* Dealer.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
