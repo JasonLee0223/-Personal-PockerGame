@@ -19,7 +19,7 @@ class CardDeck: CustomStringConvertible {
     }
     
     var deckCount: Int {
-        deck.count
+        deck.count 
     }
     
     init() {
