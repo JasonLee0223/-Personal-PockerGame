@@ -6,53 +6,50 @@
 //
 
 import Foundation
-import CoreImage
 
-struct Deck {
+// 덱은 초기화시 CardData를 52장을 가지고 있으며,
+// 덱의 카드의 수가 줄거나, 셔플, 한장 빼기등 CardData를 관리함.
+// 데이터의 변형이 일어남으로 클래스로 관리
+class CardDeck: CustomStringConvertible {
     
-    private var cardDeck: [Card] = []
+    private var deck: [Card] = []
     
-    init() {
-        makeDeck()
+    var description: String {
+        return "\(deck)\ncount: \(deck.count)"
     }
     
-//  ‘카드’라는 객체를 ‘카드덱'이라는 또 다른 객체에 넣는다
-//  ‘카드'의 객체가 가지고 있는 속성 = 모양, 숫자
-    mutating func makeDeck() {
-        for shape in Card.Suitshape.allCases {
-            for number in Card.SuitNumber.allCases {
-                cardDeck.append(Card(suitShape: shape, suitCardNumber: number))
+    var deckCount: Int {
+        deck.count
+    }
+    
+    init() {
+        reset()
+    }
+}
+extension CardDeck {
+    
+    func shuffle() {
+        (0..<deckCount).forEach{ index in
+            let randomIndex = Int.random(in: index..<deckCount)
+            let targetCard = deck[index]
+            let randomCard = deck[randomIndex]
+            deck[index] = randomCard
+            deck[randomIndex] = targetCard
+        }
+    }
+    
+    func removeOne() -> Card? {
+        if deck.isEmpty { return nil }
+        
+        let randomIndex = Int.random(in: 0..<deckCount)
+        return deck.remove(at: randomIndex)
+    }
+    
+    func reset() {
+        deck = Card.Suitshape.allCases.reduce([]) { resultDeck, pattern in
+            resultDeck + Card.SuitNumber.allCases.map {
+                Card(suitShape: pattern, suitCardNumber: $0)
             }
         }
     }
-    
-//  ‘카드덱’의 객체가 가지고 있는 것은 위 범주를 포함하고 52개라는 카드의 개수
-    func count() -> Int {
-        return cardDeck.count
-    }
-    
-    mutating func shuffle() {
-        let length = self.count()
-        
-        for index in 0..<length-1 {
-            let randomIndex = Int.random(in: index..<length)
-            
-            let temp = cardDeck[index]
-            cardDeck[index] = cardDeck[randomIndex]
-            cardDeck[randomIndex] = temp
-        }
-    }
-    
-    mutating func removeOne() -> Card {
-        let randomIndex = Int.random(in: 0..<count())
-        
-        let removeOneofCards = cardDeck.remove(at: randomIndex)
-        return removeOneofCards
-    }
-    
-    mutating func reset() {
-        cardDeck.removeAll()
-        makeDeck()
-    }
-    
 }
