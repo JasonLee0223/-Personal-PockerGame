@@ -9,20 +9,35 @@ import XCTest
 @testable import PockerGameApp
 
 class PockerGameAppTests: XCTestCase {
-    var systemUnderTest: PockerGame!
 
     override func setUpWithError() throws {
-        try super.setUpWithError()
-        systemUnderTest = PockerGame(stud: .seven)
     }
 
     override func tearDownWithError() throws {
-//        pockergame = nil
-//        dealer = nil
     }
 
-    func testPockerGame() throws {
-//        pockergame.playStart()
+    func testCardDeckReset() {
+        let cardDeck = CardDeck()
+        
+        let removeCount = 3
+        (0..<removeCount).forEach { _ in
+            guard let _ = cardDeck.removeOne() else { return }
+        }
+        XCTAssertEqual(cardDeck.deckCount, 52 - removeCount)
+        cardDeck.reset()
+        XCTAssertEqual(cardDeck.deckCount, 52, "카드덱 리셋 실패")
+    }
+    
+    func testCardDeckRemoveOne() {
+        let cardDeck = CardDeck()
+        cardDeck.removeOne()
+        XCTAssertEqual(cardDeck.deckCount, 51, "카드 뽑기 실패")
+    }
+    
+    func testCardDeckShuffle() {
+        let cardDeck = CardDeck()
+        cardDeck.shuffle()
+        XCTAssertEqual(cardDeck.deckCount, 52)
     }
 
 }
