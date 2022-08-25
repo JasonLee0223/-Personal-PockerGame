@@ -49,15 +49,18 @@ extension PokerPlayers {
     func cardDistribution(dealer: Dealer, pokerStud: PokerGame.Stud,
                           addEventHandler: @escaping (Int, Int, Card) -> Void,
                           finishEventHandler: @escaping () -> Void) {
-        // 작성 필요
+        pokerStud.cardDistribution(playerCount: self.count, loopEvent: { playerIndex, cardIndex in
+            guard let card = dealer.removeOne() else { return }
+            self.addCard(at: playerIndex, card: card)
+            addEventHandler(playerIndex, cardIndex, card)
+        }, finishEvennt: finishEventHandler)
     }
     
     func getWinner() -> String? {
-        // 작성 필요
-        return ""
+        players.reduce(into: [String:Score]()) { $0 [$1.name] = $1.score }
+            .sorted { $0.value < $1.value}.last?.key
     }
 }
-
 
 //MARK: - Count
 extension PokerPlayers {
