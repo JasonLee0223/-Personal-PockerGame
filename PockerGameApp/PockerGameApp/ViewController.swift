@@ -7,57 +7,102 @@
 
 import UIKit
 
+import Foundation
+import UIKit
+
 class ViewController: UIViewController {
+        
+    let buttonView = ButtonView()
+    let playerCardStackView = UIStackView()
+    let playerCardViews = (0...PokerPlayers.Count.max.index).map { _ in PlayerCardView() }
+    
+    let pokerGame = PokerGame()
     
     //MARK: - Override
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        .lightContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setBackground()
-        
+        bind()
+        attribute()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        layout()
         
+        pokerGame.action.pokerReset()
     }
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        
-    }
-    
-    //MARK: - Method
-    
-    //Background 설정
-    private func setBackground() {
-        guard let patternImage: UIImage = UIImage(named: "bg_pattern.png") else { return }
-        self.view.backgroundColor = UIColor(patternImage: patternImage)
-    }
-    
-    // Image 생성하여 반환
-    private func createCardImage() -> UIImageView {
-        let imageCard = UIImageView()
-        imageCard.image = UIImage(named: "card-back.png")
-        return imageCard
-    }
-    
-    // 카드 7개 만들기
-    private func createCardRect() {
-        let numberOfCard = 7
-        for cardCount in 0...numberOfCard {
-            let card = createCardImage()
-            
-            let cardWidth = getScreenWidth() / CGFloat(numberOfCard)
-            let cardHeight = cardWidth * 1.27
-            let cardCoordinateX = (CGFloat(cardCount) * cardWidth)
-            let cardCoordinateY = CGFloat(50)
-            
-            card.frame = CGRect(x: cardCoordinateX, y: cardCoordinateY, width: cardWidth, height: cardHeight)
-            view.addSubview(card)
+        if event?.subtype == .motionShake {
+            pokerGame.action.pokerPlay()
         }
     }
     
+    //MARK: - Method
+    private func bind() {
+        buttonView.bind(pockerGame: pokerGame)
+        
+        pokerGame.state.resetPockerBoard = { pockerStud, playerNames in
+            (0..<self.playerCardViews.count).forEach {
+                let cardView = self.playerCardViews[$0]
+                let name = $0 < playerNames.count ? playerNames[$0] : nil
+                cardView.resetPockerBoard(pockerStud: pockerStud, name: name)
+            }
+        }
+        
+        pokerGame.state.givePlayerCard = { index, cardIndex, card in
+            self.playerCardViews[index].setCard(at: cardIndex, card: card)
+        }
+        
+        pokerGame.state.pokerWinner = { winner in
+            self.playerCardViews.forEach {
+                $0.setWinner(winner: winner)
+            }
+        }
+    }
+    
+    private func attribute() {
+        if let backImage = UIImage(named: "bg_pattern") {
+            self.view.backgroundColor = UIColor(patternImage: backImage)
+        }
+        
+        playerCardStackView.spacing = 5
+        playerCardStackView.axis = .vertical
+        playerCardStackView.distribution = .fillProportionally
+    }
+    
+    private func layout() {
+        let safeAreaFrame = self.view.safeAreaLayoutGuide.layoutFrame
+        let topOffset = safeAreaFrame.minY
+        let leftOffset = 15.0
+        let rightOffset = 15.0
+        let safeWidth = safeAreaFrame.width - leftOffset - rightOffset
+        
+        //포커 옵션 레이아웃
+        let optionViewHeight = 80.0
+        self.view.addSubview(buttonView)
+        buttonView.frame = CGRect(x: leftOffset, y: topOffset, width: safeWidth, height: optionViewHeight)
+        
+        //플레이어 카드뷰 레이아웃
+        let optionViewOffset = 10.0
+        let cardStackViewTopOffset = topOffset + optionViewHeight + optionViewOffset
+        let cardStackViewHeight = safeAreaFrame.height - cardStackViewTopOffset
+        self.view.addSubview(playerCardStackView)
+        playerCardStackView.frame = CGRect(x: leftOffset, y: cardStackViewTopOffset, width: safeWidth, height: cardStackViewHeight)
+        
+        playerCardViews.enumerated().forEach {
+            playerCardStackView.addArrangedSubview($1)
+        }
+        
+        self.view.layoutIfNeeded()
+        
+        buttonView.layout()
+        playerCardViews.enumerated().forEach {
+            $1.layout()
+        }
+    }
 }
