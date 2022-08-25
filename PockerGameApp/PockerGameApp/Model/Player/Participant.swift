@@ -17,6 +17,10 @@ class Participant: CustomStringConvertible {
         return "Name: \(name), cards: \(cards)"
     }
     
+    var score: Score {
+        Score.calculated(cards: cards)
+    }
+    
     init(name: String) {
         self.name = name
     }
