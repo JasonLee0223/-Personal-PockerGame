@@ -38,6 +38,7 @@ extension CardDeck {
         }
     }
     
+    @discardableResult
     func removeOne() -> Card? {
         if deck.isEmpty { return nil }
         
